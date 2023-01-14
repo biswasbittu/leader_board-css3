@@ -1,11 +1,11 @@
 /* Font Style */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;500&family=Work+Sans&display=swap');
 
-body{
-/* font-family: 'Open Sans', sans-serif; */
-font-family: 'Poppins', sans-serif;
-/* font-family: 'Work Sans', sans-serif; */
-background: #F3F1FF;
+body {
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Work Sans', sans-serif; */
+    background: #F3F1FF;
 }
 
 /* Top players styles.... */
@@ -15,26 +15,38 @@ background: #F3F1FF;
     font-family: 'Poppins', sans-serif;
     font-family: 'Work Sans', sans-serif;
 } */
-main{
+main {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+
+    /* justify-content: center; */
+    align-items: center;
 }
-.container{
+
+.container {
     background: #FFFFFF;
     width: 870px;
     /* margin: auto; */
-    padding: 30px ;
+    padding: 30px;
+    border-radius: 5px;
+    margin-top: 21px;
+
 }
+
 .top-players {
     margin-bottom: 30px;
 }
-.section-title{
+
+.section-title {
     color: #562EFF;
     font-weight: 500;
     font-size: 24px;
     margin-top: 3px;
     margin-bottom: 40px;
+    font-family: 'Poppins'
+
 }
+
 .players {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -52,12 +64,12 @@ main{
 
 }
 
-.players-name{
+.players-name {
     margin-left: 16px;
     font-weight: 500;
-font-size: 18px;
-/* font-family: 'Poppins'; */
-color: #000000;
+    font-size: 18px;
+    /* font-family: 'Poppins'; */
+    color: #000000;
 }
 
 .player img {
@@ -67,6 +79,135 @@ color: #000000;
 }
 
 
-hr{
+hr {
     border: 1px solid #D1D1D1;
 }
+
+/* --------
+  Top Blogs style's 
+----------        */
+
+.blogs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 26px;
+}
+
+.blog {
+    display: flex;
+    align-items: center;
+
+
+}
+
+.blog .thumbnail img {
+    width: 177px;
+    height: 117px;
+}
+
+.blog-info {
+    margin-left: 16px;
+}
+
+.blog-title {
+    font-size: 20px;
+    /* font-weight: 500; */
+
+
+}
+
+.blog-author {
+    font-size: 16px;
+    color: #9F9F9F;
+}
+
+.blog-author a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: #562EFF;
+}
+
+/* >>>>>>......Courses style........<<<<<<  */
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 24px;
+}
+.course{
+    width: 253px;
+   
+
+}
+.course .course-banner img {
+    width: 224px;
+    height: 104px;
+}
+
+.course-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* +++++ star style ++++ */
+.fa-star {
+    font-size: 12px;
+}
+
+.fa-star.filled {
+    color: #ffc014;
+}
+
+.fa-star.empty {
+    color: #AEAEAE;
+}
+
+.course-duration {
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 14.6913px;
+    color: #ED6B4F;
+    background: #FFE4E8;
+    padding: 5px;
+    border-radius: 14.6913px;
+
+}
+
+/* >>>>>>>> Media Quaries <<<<<<<< */
+@media only screen and (max-width:688px) {
+    .container{
+        width: 100%;
+        
+    }
+    .players  , .blogs , .courses{
+        /* background-color: red; */
+        grid-template-columns: repeat(1,1fr);
+    }
+.player , .blog  {
+    flex-direction: column;
+}
+
+.courses{
+    justify-items: center;
+}
+    
+}
+/* Tablate Devices........................... */
+@media only screen and (min-width: 689px)  and (max-width: 992px){
+
+.players , .courses{
+    /* background-color: #ffc014; */
+    grid-template-columns: repeat(2,1fr);
+}
+
+.container{
+    width: 100%;
+    /* padding-right: 2px; */
+    
+}
+
+
+}
+
+
